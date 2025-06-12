@@ -1,0 +1,180 @@
+body {
+    background-color: #111111;
+    font-family: Lucida sans-serif;
+    margin: 0;
+    height: 100vh;
+    color: white;
+}
+
+.marquee-background {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.boton-brillante {
+  position: relative;
+  z-index: 1;              
+  background-color: rgba(77, 91, 209, 0.6); 
+  color: white;
+  padding: 15px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: justify;
+  display: inline-block;
+
+  animation: pulseLight 2s infinite ease-in-out;
+}
+
+@keyframes pulseLight {
+  0%, 100% {
+    opacity: 0.7;
+    box-shadow: 0 0 8px rgba(77, 91, 209, 0.6);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(77, 91, 209, 1);
+  }
+}
+
+
+.boton-brillante::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    transform: skewX(-20deg);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+}
+
+.contenedor {
+  width: 80%; 
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.video {
+  width: 560px;
+  height: 315px;
+  margin: 0 auto;
+  overflow: hidden; 
+  border-radius: 12px; 
+  box-shadow: 0 0 15px rgba(89, 77, 252, 0.384); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.911);
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.651), 0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.726), 0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.61), 0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}
+
+.contenedor-background {
+  background-color: #1615158f;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 1.5s infinite;
+  text-align: center;
+  background-color: #3316366b;
+  text-decoration: none;
+  color: #cfa2f8e8;
+}
+
+.button img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.button p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}

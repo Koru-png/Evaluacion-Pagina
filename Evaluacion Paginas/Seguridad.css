@@ -1,0 +1,205 @@
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del body / fondo fijo */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0f25;
+  color: #e0e0e0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo animado (o imagen) con efecto blur */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('0015.gif'); /* Ajusta esta ruta según donde esté el GIF */
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Contenedor principal centrado */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Cabecera */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00e0ff;
+  text-shadow: 2px 2px 12px rgba(0, 224, 255, 0.5);
+}
+
+header .subtitulo {
+  font-size: 1.2rem;
+  color: #c0d4f0;
+  margin-top: 10px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Estilos del main y tarjetas */
+main {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 700px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0, 224, 255, 0.5);
+}
+
+/* Títulos dentro de cada tarjeta */
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a0eaff;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 5px rgba(0, 160, 255, 0.3);
+}
+
+/* Párrafos y listas dentro de la tarjeta */
+.card p, .card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Estilo de la lista con viñetas personalizadas */
+.card ul li::marker {
+  color: #00e0ff;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  padding-bottom: 20px;
+}
+
+.contenedor-background {
+  background-color: #1615158f;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 1.5s infinite;
+  text-align: center;
+  background-color: #3316366b;
+  text-decoration: none;
+  color: #cfa2f8e8;
+}
+
+.button img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.button p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}

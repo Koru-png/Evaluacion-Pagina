@@ -1,0 +1,212 @@
+/* Importar fuente Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body con fondo degradado sutil */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f1d 0%, #1a1a2e 100%);
+  color: #e0e0e0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00e0ff;
+  text-shadow: 2px 2px 8px rgba(0, 224, 255, 0.4);
+  margin-bottom: 10px;
+}
+
+header .subtitulo {
+  font-size: 1.2rem;
+  color: #a0c4ff;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* Contenido principal con grid */
+main.grid-container {
+  flex-grow: 1;
+  display: grid;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+/* Disposición responsive */
+@media (min-width: 768px) {
+  main.grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  main.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tarjetas (cards) */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 36px rgba(0, 224, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Títulos dentro de la tarjeta */
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a0e0ff;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 5px rgba(0, 160, 255, 0.3);
+}
+
+/* Párrafos y listas dentro de la tarjeta */
+.card p, .card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d7d7e0;
+}
+
+.card ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Viñetas personalizadas */
+.card ul li::marker {
+  color: #00e0ff;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.contenedor-background {
+  background-color: rgba(22, 21, 21, 0.56); 
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.button {
+  display: flex;                
+  flex-direction: column;      
+  align-items: center;          
+  justify-content: flex-start;  
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 1.5s infinite;
+  text-align: center;
+
+ 
+  background-color: rgba(51, 22, 54, 0.42); 
+
+ 
+  color: #cfa2f8; 
+
+  text-decoration: none;
+}
+
+
+.button img {
+  width: 100%;
+  height: calc(80% - 0px); 
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+
+.button p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-grow: 1; 
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+  width: 100%;
+}
+
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redes Informáticas</title>
+  <link rel="stylesheet" href="Redes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+
+   
+    <header>
+      <h1>🌐 Redes Informáticas</h1>
+      <p class="subtitulo">Conectividad, protocolos y arquitecturas que unen el mundo digital</p>
+    </header>
+
+
+    <main>
+     
+      <section class="card">
+        <h2>¿Qué es una Red Informática?</h2>
+        <p>
+          Una red informática es un conjunto de dispositivos (computadoras, servidores, switches, routers, etc.) 
+          interconectados entre sí para compartir recursos y comunicarse. Estas interconexiones permiten 
+          el intercambio de información, el acceso a servicios remotos y la gestión colaborativa de datos.
+        </p>
+        <p>
+          En su forma más básica, una red consta de nodos y enlaces: los nodos son los dispositivos finales 
+          (computadoras, impresoras, smartphones) y los enlaces pueden ser cables (Ethernet), conexiones 
+          inalámbricas (Wi-Fi) o incluso enlaces de fibra óptica. Sin redes, Internet no existiría.
+        </p>
+      </section>
+
+     
+      <section class="card">
+        <h2>Topologías de Red</h2>
+        <ul>
+          <li><strong>Bus:</strong> Todos los nodos comparten un único canal de comunicación. Fácil de implementar, pero poco escalable.</li>
+          <li><strong>Estrella:</strong> Cada dispositivo se conecta a un punto central (switch o hub). Muy común en entornos LAN.</li>
+          <li><strong>Anillo:</strong> Los nodos se conectan en serie formando un bucle. El tráfico circula en una sola dirección.</li>
+          <li><strong>Malla:</strong> Cada nodo se conecta directamente con varios otros. Ofrece alta redundancia y resistencia a fallos.</li>
+          <li><strong>Árbol (Jerárquica):</strong> Combinación de topologías en estrella conectadas en niveles. Usada en grandes organizaciones.</li>
+        </ul>
+      </section>
+
+ 
+      <section class="card">
+        <h2>Protocolos y Modelos de Referencia</h2>
+        <p>
+          Para que los dispositivos “hablen” entre sí, se utilizan protocolos que definen reglas y formatos de intercambio. 
+          Los más importantes son:
+        </p>
+        <ul>
+          <li><strong>Modelo OSI (7 capas):</strong> Capa Física, Enlace de Datos, Red, Transporte, Sesión, Presentación y Aplicación.</li>
+          <li><strong>Modelo TCP/IP (4 capas):</strong> Capa de Acceso a la Red, Internet, Transporte y Aplicación.</li>
+          <li><strong>TCP:</strong> Protocolo orientado a conexión, garantiza entrega fiable y ordenada.</li>
+          <li><strong>IP:</strong> Protocolo de nivel de red que enruta paquetes entre orígenes y destinos.</li>
+          <li><strong>UDP:</strong> Protocolo sin conexión, más rápido pero sin garantía de entrega.</li>
+          <li><strong>HTTP/HTTPS:</strong> Protocolo de la capa de aplicación para la web (con cifrado en HTTPS).</li>
+          <li><strong>DNS:</strong> Traduce nombres de dominio a direcciones IP.</li>
+        </ul>
+      </section>
+
+      
+      <section class="card">
+        <h2>Arquitecturas y Dispositivos clave</h2>
+        <p>
+          Una red puede estar dividida en distintas arquitecturas según su alcance y propósito:
+        </p>
+        <ul>
+          <li><strong>LAN (Red de Área Local):</strong> Conecta dispositivos en un área geográfica limitada (oficinas, hogares).</li>
+          <li><strong>WAN (Red de Área Amplia):</strong> Conecta LANs a través de grandes distancias (ciudades, países) usando infraestructura pública o privada.</li>
+          <li><strong>MAN (Red de Área Metropolitana):</strong> Cobertura intermedia, une varias LANs dentro de una ciudad.</li>
+          <li><strong>Intranet/Extranet:</strong> Redes privadas de una organización; la Extranet permite acceso externo controlado.</li>
+        </ul>
+        <p>
+          Entre los dispositivos imprescindibles en una red se encuentran:
+        </p>
+        <ul>
+          <li><strong>Router:</strong> Encargado de enrutar paquetes entre distintas redes.</li>
+          <li><strong>Switch:</strong> Conecta dispositivos en una LAN y filtra tráfico según direcciones MAC.</li>
+          <li><strong>Firewall:</strong> Controla el tráfico de red y bloquea accesos no autorizados.</li>
+          <li><strong>Punto de Acceso (AP):</strong> Ofrece conectividad inalámbrica (Wi-Fi).</li>
+          <li><strong>Servidor DNS/DHCP:</strong> Relaciona nombres de dominio con IPs y asigna IPs dinámicamente.</li>
+        </ul>
+      </section>
+
+      
+      <section class="card">
+        <h2>Seguridad en Redes</h2>
+        <p>
+          Proteger la comunicación es vital, ya que las redes pueden ser vulnerables a múltiples amenazas:
+        </p>
+        <ul>
+          <li><strong>Sniffing:</strong> Captura de paquetes para robar información en tránsito.</li>
+          <li><strong>ARP Spoofing:</strong> Suplantación de direcciones MAC para interceptar tráfico.</li>
+          <li><strong>MitM (Man-in-the-Middle):</strong> Interceptación de la comunicación entre dos nodos.</li>
+          <li><strong>WPA3/WPA2:</strong> Protocolos de cifrado para redes Wi-Fi modernas.</li>
+          <li><strong>VPN:</strong> Crea túneles cifrados para proteger datos en redes públicas.</li>
+        </ul>
+        <p>
+          Implementar VLANs, segmentación de red y sistemas IDS/IPS (detección y prevención de intrusos) ayuda a blindar la infraestructura.
+        </p>
+      </section>
+
+      
+      <section class="card">
+        <h2>Tendencias y Futuro</h2>
+        <p>
+          El campo de redes informáticas evoluciona constantemente. Algunas tendencias clave:
+        </p>
+        <ul>
+          <li><strong>SDN (Software-Defined Networking):</strong> Desacopla el plano de control del de datos, permitiendo gestión centralizada y más flexible.</li>
+          <li><strong>Network Function Virtualization (NFV):</strong> Virtualiza funciones de red (firewalls, routers) para reducir costos y mejorar escalabilidad.</li>
+          <li><strong>5G y más allá:</strong> Conectividad ultrarrápida y baja latencia que habilita IoT masivo y aplicaciones en tiempo real.</li>
+          <li><strong>Redes definidas por IA:</strong> Automatización inteligente de la configuración y detección de anomalías en tiempo real.</li>
+          <li><strong>Seguridad Zero Trust:</strong> Modelo de “nunca confiar, siempre verificar” en cada dispositivo y usuario conectado.</li>
+        </ul>
+      </section>
+    </main>
+
+
+    <footer>
+      <p>© 2025 – Redes Informáticas </p>
+    </footer>
+
+  </div>
+
+        <div class="contenedor-background">
+    <div class="boton-container">
+
+      <a href="Evaluacion mejorado.html" class="button">
+        <img src="003.gif"/>
+        <p>Página 1</p>
+      </a>
+
+      <a href="Conceptos Basicos de la Informática.html" class="button">
+        <img src="008.gif">
+        <p>Página 2</p>
+      </a>
+
+      <a href="Programacion.html" class="button">
+        <img src="009.gif">
+        <p>Página 3</p>
+      </a>
+
+      <a href="Softwarer Util.html" class="button">
+        <img src="0011.gif" alt="Imagen 4">
+        <p>Página 4</p>
+      </a>
+
+      <a href="MP4.html" class="button">
+        <img src="0014.gif" alt="Imagen 5">
+        <p>Página 5</p>
+      </a>
+
+      <a href="Ramas de la informatica.html" class="button">
+        <img src="0012.gif" alt="imagen 6">
+        <p>Página 6</p>
+      </a>
+
+      <a href="Tecnologia de informacion (TI).html" class="button">
+        <img src="0017.gif" alt="imagen 7">
+        <p>Página 7</p>
+      </a>
+
+      <a href="Inteligencia Artificial.html" class="button">
+        <img src="0018.gif" alt="imagen 8">
+        <p>Página 8</p>
+      </a>
+
+      <a href="Seguridad Informatica.html" class="button">
+        <img src="001.gif" alt="imagen 9">
+        <p>Página 9</p>
+      </a>
+
+      <a href="Redes Informaticas.html" class="button">
+        <img src="0019.gif" alt="imagen 10">
+        <p>Página 10</p>
+
+      <a href="Tecnologias Futuras.html" class="button">
+        <img src="0020.gif" alt="Imagen 11">
+        <p>Pagina 11</p> 
+
+      <a href="Desarrollo Web.html" class="button"> 
+        <img src="0021.gif" alt="Imagen 12">
+        <p>Pagina 12</p>
+
+      <a href="Internet de las cosas.html" class="button"> 
+        <img src="0022.gif" alt="Imagen 13">
+        <p>Pagina 13</p>
+
+        <a href="Base de datos y gestion de datos.html" class="button"> 
+        <img src="0023.gif" alt="Imagen 14">
+        <p>Pagina 14</p>
+
+        <a href="Realidad VR.html" class="button"> 
+        <img src="0024.gif" alt="Imagen 15">
+        <p>Pagina 15</p>
+
+        <a href="Computacion en la nube.html" class="button"> 
+        <img src="0026.gif" alt="Imagen 16">
+        <p>Pagina 16</p>
+
+         <a href="Vision por Computadora.html" class="button"> 
+        <img src="0025.gif" alt="Imagen 17">
+        <p>Pagina 17</p>
+
+         <a href="Ingenieria del Software.html" class="button"> 
+        <img src="0028.gif" alt="Imagen 18">
+        <p>Pagina 18</p>
+
+         <a href="Desarrollo De Videojuegos.html" class="button"> 
+        <img src="0029.gif" alt="Imagen 19">
+        <p>Pagina 19</p>
+
+         <a href="BlockChain.html" class="button"> 
+        <img src="0030.gif" alt="Imagen 20">
+        <p>Pagina 20</p>
+
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

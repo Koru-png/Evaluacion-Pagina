@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bases de Datos y Gestión de Datos</title>
+  <link rel="stylesheet" href="Base de datos y G.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="layout">
+
+    <nav class="sidebar">
+      <h2 class="logo">DB Hub</h2>
+      <ul class="nav-list">
+        <li><a href="#que-es">¿Qué es una BD?</a></li>
+        <li><a href="#modelos">Modelos de Datos</a></li>
+        <li><a href="#sql-nosql">SQL vs NoSQL</a></li>
+        <li><a href="#normalizacion">Normalización</a></li>
+        <li><a href="#indices">Índices & Rendimiento</a></li>
+        <li><a href="#transacciones">Transacciones</a></li>
+        <li><a href="#backup">Backup & Recuperación</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+        <li><a href="#bigdata">Big Data</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+
+      <section id="que-es" class="section">
+        <h1>¿Qué es una Base de Datos?</h1>
+        <p>
+          Una base de datos es un almacén organizado de información que permite almacenar, consultar, 
+          actualizar y gestionar datos de forma confiable. Un Sistema de Gestión de Bases de Datos 
+          (DBMS) abstrae la complejidad de acceso, garantiza integridad, concurrencia y recuperación ante fallos. 
+        </p>
+      </section>
+
+      <section id="modelos" class="section alt">
+        <h1>Modelos de Datos</h1>
+        <ul>
+          <li><strong>Relacional:</strong> Datos en tablas (filas/columnas) usando claves primarias y foráneas (SQL).</li>
+          <li><strong>NoSQL:</strong> Datos no estructurados o semi-estructurados:
+            <ul>
+              <li>Documentos (MongoDB)</li>
+              <li>Clave-Valor (Redis)</li>
+              <li>Grafos (Neo4j)</li>
+              <li>Columnas Anchas (Cassandra)</li>
+            </ul>
+          </li>
+          <li><strong>Orientado a Grafos:</strong> Entidades y relaciones como nodos/aristas, ideal para redes sociales.</li>
+        </ul>
+
+        <img src="MongoDB.png" class="mongo">
+      </section>
+
+      <section id="sql-nosql" class="section">
+        <h1>SQL vs NoSQL</h1>
+        <div class="two-column">
+          <div class="column">
+            <h2>SQL</h2>
+            <ul>
+              <li>Estructura: Tablas con esquema fijo.</li>
+              <li>ACID: Transacciones garantizadas.</li>
+              <li>Ejemplos: MySQL, PostgreSQL, Oracle, SQL Server.</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>NoSQL</h2>
+            <ul>
+              <li>Esquema flexible o sin esquema.</li>
+              <li>Escalabilidad horizontal.</li>
+              <li>Ejemplos: MongoDB, Cassandra, Couchbase, Redis.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="normalizacion" class="section alt">
+        <h1>Normalización e Integridad</h1>
+        <p>
+          La normalización minimiza redundancias y asegura consistencia. Formas normales comunes:
+        </p>
+        <ul>
+          <li><strong>1FN:</strong> Eliminar grupos repetidos.</li>
+          <li><strong>2FN:</strong> Eliminar dependencias parciales.</li>
+          <li><strong>3FN:</strong> Eliminar dependencias transitivas.</li>
+          <li><strong>BCNF:</strong> Versión más estricta de 3FN.</li>
+        </ul>
+        <p>
+          Integridad garantizada con claves primarias, foráneas y restricciones (UNIQUE, NOT NULL, CHECK).
+        </p>
+      </section>
+
+      <section id="indices" class="section">
+        <h1>Índices y Rendimiento</h1>
+        <p>
+          Los índices aceleran consultas al costo de espacio adicional y mayor latencia en inserciones/actualizaciones. 
+          Tipos principales:
+        </p>
+        <ul>
+          <li><strong>B-Tree:</strong> Óptimo para búsquedas de rango.</li>
+          <li><strong>Hash:</strong> Rápido para búsquedas por igualdad.</li>
+          <li><strong>Texto Completo:</strong> Búsqueda por palabras en campos textuales.</li>
+          <li><strong>Compuestos:</strong> Índices sobre varias columnas.</li>
+        </ul>
+      </section>
+
+      <section id="transacciones" class="section alt">
+        <h1>Transacciones y Concurrencia</h1>
+        <p>Una transacción es una unidad atómica de trabajo que debe cumplir ACID:</p>
+        <ul>
+          <li><strong>Atomicidad:</strong> Todo o nada.</li>
+          <li><strong>Consistencia:</strong> Mantiene reglas de integridad.</li>
+          <li><strong>Aislamiento:</strong> Evita interferencias entre transacciones.</li>
+          <li><strong>Durabilidad:</strong> Los cambios persisten tras fallos.</li>
+        </ul>
+        <p>
+          Niveles de aislamiento: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE (controlan bloqueos y concurrencia).
+        </p>
+      </section>
+
+      <section id="backup" class="section">
+        <h1>Backup y Recuperación</h1>
+        <p>Protege los datos ante fallos con estas estrategias:</p>
+        <ul>
+          <li><strong>Backup Completo:</strong> Copia de toda la base de datos.</li>
+          <li><strong>Backup Diferencial:</strong> Cambios desde el último backup completo.</li>
+          <li><strong>Backup Incremental:</strong> Cambios desde el último backup (completo o incremental).</li>
+          <li><strong>Replicación:</strong> Réplica en tiempo real a servidores secundarios para alta disponibilidad.</li>
+        </ul>
+        <p>
+          Validar periódicamente los backups garantiza su fiabilidad cuando sean necesarios.
+        </p>
+      </section>
+
+      <section id="seguridad" class="section alt">
+        <h1>Seguridad en Bases de Datos</h1>
+        <p>Para proteger la información sensible:</p>
+        <ul>
+          <li><strong>Cifrado en Tránsito:</strong> TLS/SSL para conexiones seguras.</li>
+          <li><strong>Cifrado en Reposo:</strong> AES para datos almacenados.</li>
+          <li><strong>Control de Acceso:</strong> Roles, privilegios mínimos, autenticación multifactor.</li>
+          <li><strong>Auditoría:</strong> Monitoreo de accesos y actividad sospechosa.</li>
+          <li><strong>Actualizaciones:</strong> Parches regulares para cerrar vulnerabilidades.</li>
+        </ul>
+        <p>
+          Un diseño seguro previene inyecciones SQL, escalada de privilegios y accesos no autorizados.
+        </p>
+
+        <img src="Bd logo.png" class="base">
+      </section>
+
+      <section id="bigdata" class="section">
+        <h1>Big Data y Analytics</h1>
+        <p>Para procesar grandes volúmenes de datos empleamos:</p>
+        <ul>
+          <li><strong>Hadoop:</strong> HDFS, MapReduce, Hive.</li>
+          <li><strong>Spark:</strong> Procesamiento en memoria para análisis rápido.</li>
+          <li><strong>Data Warehouses:</strong> Snowflake, Redshift, BigQuery.</li>
+          <li><strong>Data Lakes:</strong> Repositorios en bruto (AWS S3, Azure Data Lake).</li>
+        </ul>
+        <p>
+          ETL/ELT transforma datos para alimentar modelos predictivos, dashboards y BI.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 – Bases de Datos y Gestión de Datos</p>
+    </footer>
+  </div>
+
+        <div class="contenedor-background">
+    <div class="boton-container">
+
+      <a href="Evaluacion mejorado.html" class="button">
+        <img src="003.gif"/>
+        <p>Página 1</p>
+      </a>
+
+      <a href="Conceptos Basicos de la Informática.html" class="button">
+        <img src="008.gif">
+        <p>Página 2</p>
+      </a>
+
+      <a href="Programacion.html" class="button">
+        <img src="009.gif">
+        <p>Página 3</p>
+      </a>
+
+      <a href="Softwarer Util.html" class="button">
+        <img src="0011.gif" alt="Imagen 4">
+        <p>Página 4</p>
+      </a>
+
+      <a href="MP4.html" class="button">
+        <img src="0014.gif" alt="Imagen 5">
+        <p>Página 5</p>
+      </a>
+
+      <a href="Ramas de la informatica.html" class="button">
+        <img src="0012.gif" alt="imagen 6">
+        <p>Página 6</p>
+      </a>
+
+      <a href="Tecnologia de informacion (TI).html" class="button">
+        <img src="0017.gif" alt="imagen 7">
+        <p>Página 7</p>
+      </a>
+
+      <a href="Inteligencia Artificial.html" class="button">
+        <img src="0018.gif" alt="imagen 8">
+        <p>Página 8</p>
+      </a>
+
+      <a href="Seguridad Informatica.html" class="button">
+        <img src="001.gif" alt="imagen 9">
+        <p>Página 9</p>
+      </a>
+
+      <a href="Redes Informaticas.html" class="button">
+        <img src="0019.gif" alt="imagen 10">
+        <p>Página 10</p>
+
+      <a href="Tecnologias Futuras.html" class="button">
+        <img src="0020.gif" alt="Imagen 11">
+        <p>Pagina 11</p> 
+
+      <a href="Desarrollo Web.html" class="button"> 
+        <img src="0021.gif" alt="Imagen 12">
+        <p>Pagina 12</p>
+
+      <a href="Internet de las cosas.html" class="button"> 
+        <img src="0022.gif" alt="Imagen 13">
+        <p>Pagina 13</p>
+
+        <a href="Base de datos y gestion de datos.html" class="button"> 
+        <img src="0023.gif" alt="Imagen 14">
+        <p>Pagina 14</p>
+
+        <a href="Realidad VR.html" class="button"> 
+        <img src="0024.gif" alt="Imagen 15">
+        <p>Pagina 15</p>
+
+        <a href="Computacion en la nube.html" class="button"> 
+        <img src="0026.gif" alt="Imagen 16">
+        <p>Pagina 16</p>
+
+         <a href="Vision por Computadora.html" class="button"> 
+        <img src="0025.gif" alt="Imagen 17">
+        <p>Pagina 17</p>
+
+         <a href="Ingenieria del Software.html" class="button"> 
+        <img src="0028.gif" alt="Imagen 18">
+        <p>Pagina 18</p>
+
+         <a href="Desarrollo De Videojuegos.html" class="button"> 
+        <img src="0029.gif" alt="Imagen 19">
+        <p>Pagina 19</p>
+
+         <a href="BlockChain.html" class="button"> 
+        <img src="0030.gif" alt="Imagen 20">
+        <p>Pagina 20</p>
+
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

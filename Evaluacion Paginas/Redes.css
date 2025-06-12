@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del body y fondo degradado */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f 0%, #283348 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Contenedor principal centra todo el contenido */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header con título y subtítulo */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00dfff;
+  text-shadow: 2px 2px 12px rgba(0, 223, 255, 0.5);
+}
+
+header .subtitulo {
+  font-size: 1.2rem;
+  color: #a9cce3;
+  margin-top: 8px;
+  max-width: 700px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout del main con tarjetas en grid */
+main {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilo de cada tarjeta (card) */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover sobre la tarjeta */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0, 215, 255, 0.5);
+}
+
+/* Títulos dentro de la tarjeta */
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a0deff;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 5px rgba(0, 150, 200, 0.3);
+}
+
+/* Párrafos y listas dentro de la tarjeta */
+.card p, .card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dde7f0;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Personaliza las viñetas de la lista */
+.card ul li::marker {
+  color: #00dfff;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  padding-bottom: 20px;
+}
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.contenedor-background {
+  background-color: rgba(22, 21, 21, 0.56); 
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.button {
+  display: flex;                
+  flex-direction: column;      
+  align-items: center;          
+  justify-content: flex-start;  
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 1.5s infinite;
+  text-align: center;
+
+ 
+  background-color: rgba(51, 22, 54, 0.42); 
+
+ 
+  color: #cfa2f8; 
+
+  text-decoration: none;
+}
+
+
+.button img {
+  width: 100%;
+  height: calc(80% - 0px); 
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+
+.button p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-grow: 1; 
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+  width: 100%;
+}
+
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}

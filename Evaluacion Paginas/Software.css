@@ -1,0 +1,153 @@
+body {
+  background-color: #1a1a1a;
+    font-family: Lucida sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+    height: 100vh; 
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(0012.gif); 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(10px); 
+    z-index: -1; 
+}
+
+
+.contenedor {
+     background-color: rgba(15, 15, 15, 0.75); 
+    border: 5px solid rgba(96, 92, 158, 0.1); 
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px;
+    overflow: hidden;
+    backdrop-filter: blur(7px); 
+    box-shadow: 0 0 30px rgba(57, 67, 216, 0.1); 
+}
+
+h1 {
+    background-color: #1615158f; 
+    color: white;              
+    padding: 15px 40px;            
+    border-radius: 50px;    
+    display: inline-block; 
+    text-align: justify;
+
+    opacity: 0;
+    transform: translateY(30px) scale(0.8); 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); 
+    
+    animation: slideGlow 1.5s ease-out forwards;
+}
+
+
+@keyframes slideGlow {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Resplandor débil */
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0) scale(1.1); /* Aumenta de tamaño */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1); /* Resplandor fuerte */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Vuelve al tamaño normal */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Resplandor suave */
+    }
+}
+
+p,
+ol {
+    font-family: 'Lucida Console';
+    text-align: justify;
+    font-size: 25px;
+    color: white;
+}
+
+img {
+    width: 25px;
+}
+
+.adobe {
+    width: 50px;
+    right: 40px;
+}
+
+.contenedor-background {
+  background-color: #1615158f;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.boton-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: shine 1.5s infinite;
+  text-align: center;
+  background-color: #3316366b;
+  text-decoration: none;
+  color: #cfa2f8e8;
+}
+
+.button img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.button p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(110, 97, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(120, 90, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(105, 36, 170, 0.6);
+  }
+}
